@@ -20,17 +20,17 @@ a{
 }
 
 .bgimg-1 {
-    background-image: url("img_parallax.jpg");
+    background-image: url("Imagens/img_01.jpg"); 
     min-height: 100%;
 }
 
 .bgimg-2 {
-    background-image: url("img_parallax2.jpg");
+    background-image: url("Imagens/img_02.jpg");
     min-height: 400px;
 }
 
 .bgimg-3 {
-    background-image: url("img_parallax3.jpg");
+    background-image: url("Imagens/img_03.jpeg");
     min-height: 400px;
 }
 
