@@ -4268,7 +4268,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-dark .navbar-brand {
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
 
 .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
@@ -4276,7 +4276,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.5);
+  color: #240909;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
@@ -4323,8 +4323,9 @@ input[type="button"].btn-block {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
+  /*border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;*/
+  border:none;
 }
 
 .card > hr {
@@ -9564,7 +9565,7 @@ html {
 hr.divider {
   max-width: 3.25rem;
   border-width: 0.2rem;
-  border-color: #f4623a;
+  border-color: #fff;
 }
 
 hr.light {
@@ -9585,6 +9586,22 @@ hr.light {
 }
 
 .page-section {
+  padding: 4rem ;
+  padding-bottom: 4rem; 
+  background-color: #343a40;
+}
+
+.services{
+  display: inline;
+  padding: 1em; 
+  
+
+  
+}
+
+
+
+.page-about{
   padding: 8rem 0;
 }
 
@@ -9622,13 +9639,13 @@ hr.light {
     background-color: transparent;
   }
   #mainNav .navbar-brand {
-    color: rgba(255, 255, 255, 0.7);
+    color: #fff;
   }
   #mainNav .navbar-brand:hover {
     color: #fff;
   }
   #mainNav .navbar-nav .nav-item .nav-link {
-    color: rgba(255, 255, 255, 0.7);
+    color: #e2dddd;
     padding: 0 1rem;
   }
   #mainNav .navbar-nav .nav-item .nav-link:hover {
@@ -9658,7 +9675,7 @@ hr.light {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 72px);
-  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../img/bg-masthead.jpg");
+  background: linear-gradient(to bottom, rgba(136, 128, 128, 0.8) 0%, rgba(65, 64, 63, 0.8) 100%), url("../Imagens/img_01.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -9729,4 +9746,18 @@ header.masthead h1 {
 
 #portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
+}
+
+
+.description{
+  background: linear-gradient(to bottom, rgba(136, 128, 128, 0.8) 0%, rgba(65, 64, 63, 0.8) 100%), url("../Imagens/img_03.jpeg");
+  background-size: cover;
+}
+
+.Apoio{
+  padding: 4em;
+}
+
+.lapic{
+  margin-top: 40px;
 }
