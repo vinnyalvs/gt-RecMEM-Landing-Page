@@ -22,6 +22,21 @@
 
 </head>
 
+<script>
+    window.onscroll = function() { myFunction() };
+
+    var menu = document.getElementById("mainNav");
+    var sticky = menu.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+            menu.classList.add("sticky");
+        } else {
+            menu.classList.remove("sticky");
+        }
+    }
+</script>
+
 <body id="page-top">
 
   <!-- Navigation -->
@@ -153,9 +168,6 @@
        </div>
   </div>
   </section>
-
-
-
 
 
   <!-- Saiba Mais Section -->
