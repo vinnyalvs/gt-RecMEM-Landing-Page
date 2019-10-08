@@ -19,7 +19,9 @@
 
   <!-- Theme CSS - Includes Bootstrap -->
   <link href="css/creative.css" rel="stylesheet">
+  <link href="css/menu.css" rel="stylesheet">
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 </head>
 
 <script>
@@ -30,11 +32,12 @@
 
     function myFunction() {
         if (window.pageYOffset > sticky) {
-            menu.classList.add("sticky");
+            menu.classList.add("sticky"); 
         } else {
-            menu.classList.remove("sticky");
+            menu.classList.remove("sticky"); 
         }
-    }
+    } 
+
 </script>
 
 <body id="page-top">
@@ -43,6 +46,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">GT-RecMEM</a>
+      <!-- <a class="navbar-brand js-scroll-trigger" href="#page-top"><img style="max-width:20%;" src="RecMEM.png"></a> -->
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -68,6 +72,7 @@
     </div>
   </nav>
 
+
   <!-- Masthead -->
   <header class="masthead">
     <div class="container h-100">
@@ -82,9 +87,9 @@
         </div>
       </div>
     </div>
-  </header>
-
-  <!-- About Section -->
+  </header> 
+ 
+ <!-- About Section -->
  <!-- <section class="page-about bg-dark" id="about">
     <div class="container">
       <div class="row justify-content-center">
@@ -263,8 +268,37 @@
     </div>
   </footer>
 
- 
+  <script type="text/javascript">
+    window.onscroll = fadeNav;
 
-</body>
+    function fadeNav(){  
+        var offset = getScrollXY();
+        if (offset[1] > 50) { 
+          document.getElementById("mainNav").style.backgroundColor = 'rgb('+42+','+46+','+51+')';;
+        } else {
+          document.getElementById("mainNav").style.backgroundColor = "";
+        }
+    }
 
+
+    function getScrollXY() {
+      var scrOfX = 0, scrOfY = 0;
+      if( typeof( window.pageYOffset ) == 'number' ) {
+        //Netscape compliant
+        scrOfY = window.pageYOffset;
+        scrOfX = window.pageXOffset;
+      } else if( document.body && ( document.body.scrollLeft || document.body.scrollTop ) ) {
+        //DOM compliant
+        scrOfY = document.body.scrollTop;
+        scrOfX = document.body.scrollLeft;
+      } else if( document.documentElement && ( document.documentElement.scrollLeft || document.documentElement.scrollTop ) ) {
+        //IE6 standards compliant mode
+        scrOfY = document.documentElement.scrollTop;
+        scrOfX = document.documentElement.scrollLeft;
+      }
+      return [ scrOfX, scrOfY ];
+    }
+  </script>
+
+</body> 
 </html>
