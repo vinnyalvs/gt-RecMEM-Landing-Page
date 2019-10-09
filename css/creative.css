@@ -9592,11 +9592,7 @@ hr.light {
 }
 
 .services{
-  display: inline;
-  padding: 1em; 
-  
-
-  
+  display: inline;  
 }
 
 
@@ -9760,4 +9756,8 @@ header.masthead h1 {
 
 .lapic{
   margin-top: 40px;
+}
+
+hr.dividerBlack{
+  border-color: #343a40;;
 }

@@ -46,16 +46,16 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3" id="mainNav">
     <div class="container">
       <!-- <a class="navbar-brand js-scroll-trigger" href="#page-top">GT-RecMEM</a> -->
-      <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="pequeno.png"></a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="Imagens/pequeno.png"></a>
       <!-- <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="RecMEM.png"></a> -->
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto my-2 my-lg-0">
-          <li class="nav-item">
+         <!-- <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#about">Quem Somos</a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#services">Nossos Serviços</a>
           </li>
@@ -108,8 +108,8 @@
   <section class="page-section" id="services">
     <div class="container">
       <h2 class="text-white text-center mt-0">NOSSOS SERVIÇOS! </h2>
-      <h3 class="text-white text-center mt-0">ATRAVÉS DE TÉCNICAS DE INTELIGÊNCIA ARTIFICIAL PODEMOS RECOMENDAR QUALQUER TIPO DE MÍDIA EDUCAIONAL E OBJETOS DE APRENDIZAGEM!</h3>
       <hr class="divider my-4">
+      <p class="text-white-75 text-center font-weight-bold">Através de Técnicas de Inteligência Artificial Podemos Recomendar Qualquer tipo de mídia educacional e objetos de aprendizagem!</p>
       <div class="row">
         <div class="col-lg-3 col-md-6 text-center">
           <div class="mt-5">
@@ -150,26 +150,26 @@
   <div class="container text-center gap">
        <div class="row">
          <div class="col-sm-12 text-left "> 
-             <h3 class="h4 mb-2 services">Facilidade ao criar cursos</h3>
-             <p > Sem mais horas de busca no google por material novo</p>
+             <h3 class="h4 mb-2 font-weight-bold services">Facilidade ao criar cursos</h3>
+             <p class= "font-weight-bold"> Sem mais horas de busca no google por material novo</p>
          </div>
        </div>
        <div class="row">
            <div class="col-sm-12 text-right "> 
                <h3 class="h4 mb-2  services">Tenha controle do conteúdo</h3>
-               <p >Altos niveis de personalização para você decidir o que é apresentado aos alunos</p>
+               <p class= "font-weight-bold"> Altos niveis de personalização para você decidir o que é apresentado aos alunos</p>
            </div>
        </div>
        <div class="row">
          <div class="col-sm-12 text-left "> 
              <h3 class="h4 mb-2 services">Entenda o aluno</h3>
-             <p >Tenha o feedback de quais materiais estão tendo sucesso com seus alunos</p>
+             <p class= "font-weight-bold">Tenha o feedback de quais materiais estão tendo sucesso com seus alunos</p>
          </div>
        </div>
        <div class="row">
          <div class="col-sm-12 text-right "> 
              <h3 class="h4 mb-2 services">Materias de qualidade</h3>
-             <p >Materiais sempre são produzidos por professores especialistas na área</p>
+             <p class= "font-weight-bold">Materiais sempre são produzidos por professores especialistas na área</p>
          </div>
        </div>
   </div>
@@ -180,6 +180,7 @@
   <section class="page-section " id="saibaMais">
     <div class="container text-center">
       <h2 class="mb-4 text-white">Quer o RecMEM na sua instituição?</h2>
+      <hr class="divider my-4">
       <div class="row">
           <div class="col-sm-6 text-center "> 
             <a class="btn btn-light btn-xl" href="">Sou Gestor de Ensino!</a>
@@ -194,6 +195,7 @@
   <!-- Apoio Section -->
   <section class="Apoio" id="Apoio">
       <div class="row h-100 align-items-center justify-content-center text-center"> <h2> Apoio</h2></div>
+      <hr class="divider my-4 dividerBlack">
       <div class="row">
           <div class="col-sm-3">
               <div class="card" style="width: 18rem;">
@@ -277,7 +279,7 @@
     function fadeNav(){  
         var offset = getScrollXY();
         if (offset[1] > 50) { 
-          document.getElementById("mainNav").style.backgroundColor = 'rgb('+42+','+46+','+51+')';;
+          document.getElementById("mainNav").style.backgroundColor = "#343a40" ; 
         } else {
           document.getElementById("mainNav").style.backgroundColor = "";
         }
