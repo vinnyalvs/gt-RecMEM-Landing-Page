@@ -9603,7 +9603,7 @@ hr.light {
 
 #mainNav {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  background-color: #fff;
+
   transition: background-color 0.2s ease;
 }
 
@@ -9760,6 +9760,46 @@ header.masthead h1 {
 
 hr.dividerBlack{
   border-color: #343a40;;
+}
+@media(max-width: 576px){
+  .maps{
+    margin-top: 20px;
+    padding-bottom: 75%; 
+    position: relative;
+    overflow: hidden;
+  } 
+
+  .row .Apoio{
+    text-align: left;
+  }
+
+  .btn{
+    margin: 10px;
+  }
+
+  .services{
+    margin-bottom: 15px;
+  }
+
+  .card-img-top{
+    width:85%;
+  }
+
+}
+
+
+.maps{
+  position: relative;
+}
+
+#contact{
+  padding-bottom: 5em;
+}
+.maps iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
 }
 
 /* Button used to open the contact form - fixed at the bottom of the page */
