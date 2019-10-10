@@ -185,13 +185,39 @@
       <h2 class="mb-4 text-white">Quer o RecMEM na sua instituição?</h2>
       <div class="row">
           <div class="col-sm-6 text-center "> 
-            <a class="btn btn-light btn-xl" href="">Sou Gestor de Ensino!</a>
+            <a class="btn btn-light btn-xl"  onclick="openForm()">Sou Gestor de Ensino!</a>
           </div>
           <div class="col-sm-6 text-center "> 
-            <a class="btn btn-light btn-xl" href="">Sou Professor!</a>
+            <a class="btn btn-light btn-xl"  onclick="openForm()">Sou Professor!</a>
           </div>
       </div>
     </div>
+
+  <div class="form-popup" id="myForm">
+    <form class="form-container">
+      <h1>Deixe o seu contato!</h1>
+
+      <label for="nome"><b>Nome</b></label>
+      <input type="text" placeholder="Seu nome" name="nome" required>
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Email" name="email" required>
+
+      <button type="submit" class="btn">Enviar</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Fechar</button>
+    </form>
+  </div>
+
+  <script type="text/javascript">
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+  </script>
+
   </section>
 
   <!-- Apoio Section -->
