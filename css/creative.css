@@ -9672,10 +9672,12 @@ header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 72px);
   background: linear-gradient(to bottom, rgba(136, 128, 128, 0.8) 0%, rgba(65, 64, 63, 0.8) 100%), url("../Imagens/img_01.jpg");
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
+  background-size: cover; 
+  
+}
 }
 
 header.masthead h1 {
@@ -9747,7 +9749,10 @@ header.masthead h1 {
 
 .description{
   background: linear-gradient(to bottom, rgba(136, 128, 128, 0.8) 0%, rgba(65, 64, 63, 0.8) 100%), url("../Imagens/img_03.jpeg");
-  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
 }
 
 .Apoio{
@@ -9869,3 +9874,5 @@ hr.dividerBlack{
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
+
+
