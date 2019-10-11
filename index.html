@@ -18,10 +18,14 @@
   <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
   <!-- Theme CSS - Includes Bootstrap -->
-  <link href="css/creative.css" rel="stylesheet">
-  <link href="css/menu.css" rel="stylesheet">
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <!-- Email Library-->
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  
+  <link href="css/creative.css" rel="stylesheet">
+  
+  
+  
  
 </head>
 
@@ -169,7 +173,7 @@
        </div>
        <div class="row">
          <div class="col-sm-12 text-right "> 
-             <h3 class="h4 mb-2 services">Materias de qualidade</h3>
+             <h3 class="h4 mb-2 services">Materiais de qualidade</h3>
              <p class= "font-weight-bold">Materiais sempre são produzidos por professores especialistas na área</p>
          </div>
        </div>
@@ -185,10 +189,10 @@
       <h2 class="mb-4 text-white">Quer o RecMEM na sua instituição?</h2>
       <div class="row">
           <div class="col-sm-6 text-center "> 
-            <a class="btn btn-light btn-xl"  onclick="openForm()">Sou Gestor de Ensino!</a>
+            <a class="btn btn-light btn-xl"  onclick="openForm('gestor')">Sou Gestor de Ensino!</a>
           </div>
           <div class="col-sm-6 text-center "> 
-            <a class="btn btn-light btn-xl"  onclick="openForm()">Sou Professor!</a>
+            <a class="btn btn-light btn-xl"  onclick="openForm('professor')">Sou Professor!</a>
           </div>
       </div>
     </div>
@@ -197,23 +201,50 @@
     <form class="form-container">
       <h1>Deixe o seu contato!</h1>
 
-      <input type="text" placeholder="Seu nome" name="nome" required>
-      <input type="text" placeholder="Insituição de Ensino" name="instituicao" required>
-      <input type="text" placeholder="Email" name="email" required>
+      <input type="text" placeholder="Seu nome" name="nome" id="nome" required>
+      <input type="text" placeholder="Insituição de Ensino" id="instituicao" name="instituicao" required>
+      <input type="text" placeholder="Email" name="email" id="email" required>
 
-      <button type="submit" class="btn">Enviar</button>
+      <button type="button" onclick="sendEmail()" class="btn">Enviar</button>
       <button type="button" class="btn cancel" onclick="closeForm()">Fechar</button>
     </form>
   </div>
 
   <script type="text/javascript">
-  function openForm() {
+  var id;
+
+  function openForm(profissao) {
+    id = profissao;
     document.getElementById("myForm").style.display = "block";
   }
 
   function closeForm() {
     document.getElementById("myForm").style.display = "none";
   }
+
+function sendEmail(){
+    var nome = document.getElementById("nome").value;
+    var email = document.getElementById("email").value;
+    var instituicao = document.getElementById("instituicao").value;
+    //jairo.souza@ice.ufjf.br
+    //alert("O Nome: "+ nome + " deixou seu contato" + "\n" + email + "\n ele e " + id + " na instituicao: " + instituicao);
+    Email.send({
+      Host : " mail.smtp2go.com",
+      Username : "getrecmem@lapic.ufjf",
+      Password : "eSl2eG8fgwuq",
+      To : 'jairo.souza@ice.ufjf.br',
+      From : "gtrecmem@gmail.com",
+      Subject : "Alguém deixou o contato na pagina do gt recmem",
+      Body : "O "+ nome + " deixou o contato: " + "\n" + email + "\n ele é " + id + " na instituição: " + instituicao
+      
+  }).then(
+    message => alert(message)
+    
+  );
+  closeForm();
+  
+}
+
   </script>
 
   </section>
@@ -273,13 +304,13 @@
       <div class="row" style="vertical-align: middle;">
         <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
           <i class="fas fa-phone fa-3x mb-3 text-white"></i>
-          <div>(32) 7070-7070</div>
+          <p class="text-white text-center mt-0">(32) 2102-3311 </p>
+          <p class="text-white text-center mt-0"> Ramal 4037 </p>
         </div>
-        <div class="col-lg-4 mr-auto text-center">
+        <!-- <div class="col-lg-4 mr-auto text-center">
           <i class="fas fa-envelope fa-3x mb-3 text-white"></i>
-          <!-- Make sure to change the email address in anchor text AND the link below! -->
           <a class="d-block text-white" href="mailto:lapic@ice.ufjf.br">lapic@ice.ufjf.br</a>
-        </div>
+        </div> -->
         <div class="col-lg-4 mr-auto text-center maps">
             <div >
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14820.35673644393!2d-43.3717058!3d-21.7768091!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2d5173c27b20ecc8!2sLApIC%20-%20Laborat%C3%B3rio%20de%20Aplica%C3%A7%C3%B5es%20Inovadoras%20em%20Computa%C3%A7%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1570460157442!5m2!1spt-BR!2sbr" frameborder="0" 

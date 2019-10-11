@@ -9761,7 +9761,7 @@ header.masthead h1 {
 hr.dividerBlack{
   border-color: #343a40;;
 }
-@media(max-width: 576px){
+@media(max-width: 700px){
   .maps{
     margin-top: 20px;
     padding-bottom: 75%; 
