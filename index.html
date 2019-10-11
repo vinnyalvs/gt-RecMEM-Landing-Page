@@ -21,11 +21,16 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <!-- Email Library-->
   <script src="https://smtpjs.com/v3/smtp.js"></script>
-  
-  <link href="css/creative.css" rel="stylesheet">
-  
-  
-  
+  <link href="css/creative.css" rel="stylesheet">  
+
+
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
  
 </head>
 
@@ -46,13 +51,10 @@
 </script>
 
 <body id="page-top">
-
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3" id="mainNav">
-    <div class="container">
-      <!-- <a class="navbar-brand js-scroll-trigger" href="#page-top">GT-RecMEM</a> -->
-      <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="Imagens/pequeno2.png"></a>
-      <!-- <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="RecMEM.png"></a> -->
+    <div class="container-fluid"> 
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="Imagens/pequeno2.png"></a> 
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -76,8 +78,7 @@
         </ul>
       </div>
     </div>
-  </nav>
-
+  </nav> 
 
   <!-- Masthead -->
   <header class="masthead">
@@ -110,7 +111,7 @@
   </section> -->
 
   <!-- Services Section -->
-  <section class="page-section" id="services">
+  <section class="page-section" id="services" style="padding-top: 150px;">
     <div class="container">
       <h2 class="text-white text-center mt-0">NOSSOS SERVIÇOS</h2>
       <hr class="divider my-4">
@@ -182,7 +183,7 @@
 
 
   <!-- Saiba Mais Section -->
-  <section class="page-section " id="saibaMais">
+  <section class="page-section " id="saibaMais" style="padding-top: 150px;">
     <div class="container text-center"> 
       <h2 class="text-white text-center mt-0">SAIBA MAIS</h2>
       <hr class="divider my-4">
@@ -250,7 +251,7 @@ function sendEmail(){
   </section>
 
   <!-- Apoio Section -->
-  <section class="Apoio" id="Apoio">
+  <section class="Apoio" id="Apoio" style="padding-top: 150px;">
       <div class="row h-100 align-items-center justify-content-center text-center"> <h2> APOIO</h2></div>
       <hr class="divider my-4 dividerBlack">
       <div class="row">
@@ -292,7 +293,7 @@ function sendEmail(){
  
 
   <!-- Contact Section -->
-  <section class="page-section bg-dark text-white" id="contact">
+  <section class="page-section bg-dark text-white" id="contact"  style="padding-top: 150px;">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
@@ -361,7 +362,16 @@ function sendEmail(){
       return [ scrOfX, scrOfY ];
     }
 
-    $(document).ready(function () {
+    //fechar o menu quando clicado na versao mobile
+	$(function(){ 
+	    var navMain = $(".navbar-collapse");  
+	    navMain.on("click", "a:not([data-toggle])", null, function () {
+	        navMain.collapse('hide');
+	    });
+	});  
+
+
+	$(document).ready(function () {
 	    // Handler for .ready() called.
 	    $("a").click(function(){
 	        $('html, body').animate({
@@ -369,16 +379,6 @@ function sendEmail(){
 	        }, 'slow');
 	    });
 	}); 
-
-	$('.container a[href^="#"]').on('click', function(e) {
-  		e.preventDefault();
-	  	var id = $(this).attr('href'),
-	  	targetOffset = $(id).offset().top;
-	    
-	  	$('html, body').animate({ 
-	    	scrollTop: targetOffset - 50
-	  	}, 500);
-	});
   </script>
 
 </body> 
