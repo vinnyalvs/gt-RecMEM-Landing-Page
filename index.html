@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-
+<html lang="en"> 
+<head> 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -22,24 +20,25 @@
   <!-- Email Library-->
   <script src="https://smtpjs.com/v3/smtp.js"></script>
   <link href="css/creative.css" rel="stylesheet">  
-
-
-
-
+ 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
- 
 </head>
+
+<style type="text/css">
+	
+html {
+  scroll-behavior: smooth;
+}
+
+</style>
 
 <script>
     window.onscroll = function() { myFunction() };
-
     var menu = document.getElementById("mainNav");
     var sticky = menu.offsetTop;
-
     function myFunction() {
         if (window.pageYOffset > sticky) {
             menu.classList.add("sticky"); 
@@ -47,7 +46,6 @@
             menu.classList.remove("sticky"); 
         }
     } 
-
 </script>
 
 <body id="page-top">
@@ -275,23 +273,17 @@ function sendEmail(){
           <div class="card" style="width: 18rem;">
             <a href="http:/www.ufjf.br" target="_blank"> <img class="card-img-top" src="Imagens/Logo_da_UFJF.png"  alt="Card image cap"> </a>
           </div>
-        </div>
-
+        </div> 
        <!-- <div class="col-sm-2">
           <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="Imagens/pgcc.png" alt="Card image cap">
           </div> 
         </div>
-      -->
-
+      --> 
       </div>
-  </div>
-
-
+  </div> 
   </section>
-
  
-
   <!-- Contact Section -->
   <section class="page-section bg-dark text-white" id="contact"  style="padding-top: 150px;">
     <div class="container">
@@ -379,6 +371,16 @@ function sendEmail(){
 	        }, 'slow');
 	    });
 	}); 
+
+	$('.container a[href^="#"]').on('click', function(e) {
+  		e.preventDefault();
+	  	var id = $(this).attr('href'),
+	  	targetOffset = $(id).offset().top;
+	    
+	  	$('html, body').animate({ 
+	    	scrollTop: targetOffset - 50
+	  	}, 500);
+	});
   </script>
 
 </body> 
