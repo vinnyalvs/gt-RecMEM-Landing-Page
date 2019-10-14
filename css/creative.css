@@ -9582,6 +9582,7 @@ hr.light {
   text-transform: uppercase;
   border: none;
   border-radius: 10rem;
+
 }
 
 .page-section {
@@ -9595,6 +9596,11 @@ hr.light {
 }
 
 
+.botao{
+  background-color: #FFFFFF;
+  width: 225px;
+  height: 80px;
+}
 
 .page-about{
   padding: 8rem 0;
