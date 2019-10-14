@@ -9667,6 +9667,15 @@ hr.light {
   }
 }
 
+
+@media(max-width: 500px) {
+  #mainNav {
+    box-shadow: none;
+    background-color: #343a40;
+  } 
+
+}
+
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 72px);
@@ -9881,6 +9890,8 @@ hr.dividerBlack{
     max-width: 50%;
   }
 }
+
+
 
 	/*
   html {
