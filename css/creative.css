@@ -9668,7 +9668,7 @@ hr.light {
 }
 
 
-@media(max-width: 500px) {
+@media(max-width: 1000px) {
   #mainNav {
     box-shadow: none;
     background-color: #343a40;
@@ -9808,12 +9808,21 @@ hr.dividerBlack{
 #contact{
   padding-bottom: 5em;
 }
+@media(max-width: 1200px) {
 .maps iframe{
   position: absolute;
   top: 0;
   left: 0;
   width: 100% !important;
+  }
 }
+
+  .maps iframe{
+    position: absolute;
+    top: 0;
+    width: 100% !important;
+  }
+
 
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
