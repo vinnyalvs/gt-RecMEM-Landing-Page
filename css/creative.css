@@ -6016,7 +6016,7 @@ a.close.disabled {
   align-items: center;
   justify-content: center;
   width: 15%;
-  color: #fff;
+  color: #000;
   text-align: center;
   opacity: 0.5;
   transition: opacity 0.15s ease;
@@ -6032,7 +6032,7 @@ a.close.disabled {
 .carousel-control-prev:hover, .carousel-control-prev:focus,
 .carousel-control-next:hover,
 .carousel-control-next:focus {
-  color: #fff;
+  color: #000;
   text-decoration: none;
   outline: 0;
   opacity: 0.9;
@@ -6054,6 +6054,10 @@ a.close.disabled {
   background: no-repeat 50% / 100% 100%;
 }
 
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
+}
 .carousel-control-prev-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3e%3c/svg%3e");
 }
@@ -6107,12 +6111,24 @@ a.close.disabled {
   position: absolute;
   right: 15%;
   bottom: 20px;
-  left: 15%;
   z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: #fff;
+  left:15%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #b9bbbe;
   text-align: center;
+  background-color: #212529; 
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+.carousel-caption{
+  opacity:0;
+  transition:500ms ease-in-out;
+}
+.carousel-item:hover .carousel-caption{
+  opacity:1;
 }
 
 @-webkit-keyframes spinner-border {
@@ -9692,7 +9708,7 @@ header.masthead {
   background-size: cover; 
   
 }
-}
+
 
 header.masthead h1 {
   font-size: 2.25rem;
@@ -9898,6 +9914,16 @@ hr.dividerBlack{
   opacity: 1;
 }
 
+.carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 /* Gambiarra  */
 @media(min-width: 992px) and (max-width: 1199px){
   .col-lg-3{
@@ -9905,12 +9931,3 @@ hr.dividerBlack{
     max-width: 50%;
   }
 }
-
-
-
-	/*
-  html {
-    scroll-behavior: smooth;
-    transition-duration: 1ms;
-  }
-  */
