@@ -15,7 +15,7 @@
   --indigo: #6610f2;
   --purple: #6f42c1;
   --pink: #e83e8c;
-  --red: #dc3545; 
+  --red: #dc3545;
   --yellow: #ffc107;
   --green: #28a745;
   --teal: #20c997;
@@ -6117,7 +6117,7 @@ a.close.disabled {
   padding-bottom: 10px;
   color: #b9bbbe;
   text-align: center;
-  background-color: #212529; 
+  background-color: #212529;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
@@ -9603,12 +9603,12 @@ hr.light {
 
 .page-section {
   padding: 4rem ;
-  padding-bottom: 4rem; 
+  padding-bottom: 4rem;
   background-color: #343a40;
 }
 
 .services{
-  display: inline;  
+  display: inline;
 }
 
 
@@ -9694,7 +9694,7 @@ hr.light {
   #mainNav {
     box-shadow: none;
     background-color: #343a40;
-  } 
+  }
 
 }
 
@@ -9705,8 +9705,8 @@ header.masthead {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; 
-  
+  background-size: cover;
+
 }
 
 
@@ -9782,7 +9782,7 @@ header.masthead h1 {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; 
+  background-size: cover;
 }
 
 .Apoio{
@@ -9799,10 +9799,10 @@ hr.dividerBlack{
 @media(max-width: 700px){
   .maps{
     margin-top: 20px;
-    padding-bottom: 40%; 
+    padding-bottom: 40%;
     position: relative;
     overflow: hidden;
-  } 
+  }
 
   .row .Apoio{
     text-align: left;
